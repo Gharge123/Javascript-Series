@@ -1,3 +1,8 @@
+
+import { name, age } from './importexport.js';
+console.log(name("Rutuja"))
+console.log(age(20));
+
 // import {add, sub} from "./exportimport.js";
 
 // console.log(add(24,67));
@@ -23,3 +28,4 @@
 
 import mul from "./exportimport.js";
 console.log(mul(30,30));
+

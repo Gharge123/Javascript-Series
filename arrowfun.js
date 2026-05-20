@@ -59,3 +59,29 @@ const demo = (name) =>{
 
 
 
+
+const demo = (name) => {
+
+    const message = `Hello, ${name}`;
+    return message
+}
+console.log(demo("Rutuja"));
+
+const data = add =>
+({
+    addition: `Addtion of a and b is ${add}`
+})
+
+console.log(data(50).addition);
+
+const greet = (name = "Rutuja") => `hello, ${name}`;
+console.log(greet());
+
+const data1 = name => () => `hello, ${name}`;
+console.log(data1("Rutuja Patil")());
+
+const greet1 = (...name) => `Hello ${name.join(",")}`;
+console.log(greet1("Rutuja Patil"));
+
+const message1 = ((name) => `Hello, ${name}`)("Guest");
+console.log(message1);
