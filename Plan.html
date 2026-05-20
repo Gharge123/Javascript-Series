@@ -1,0 +1,208 @@
+DAY 1 (Today): JavaScript Basics + Variables + Data Types
+1. What is JavaScript?
+
+JavaScript is a programming language used to make web pages interactive.
+
+👉 Example:
+
+alert("Hello World");
+2. JavaScript Engine
+Browser: Chrome uses V8 Engine
+Server: Node.js
+
+👉 Converts JS → Machine Code
+
+3. Data Types
+🔹 Primitive
+let a = 10; // number
+let name = "Rutuja"; // string
+let isTrue = true; // boolean
+let x = null;
+let y; // undefined
+let s = Symbol("id");
+🔹 Non-Primitive
+let obj = {name: "Rutuja"};
+let arr = [1,2,3];
+function test(){}
+4. Difference
+Primitive Non-Primitive
+Value copy Reference copy
+Immutable Mutable
+
+👉 Example:
+
+let a = 10;
+let b = a;
+b = 20; // a not changed
+
+let obj1 = {name: "A"};
+let obj2 = obj1;
+obj2.name = "B"; // obj1 also changed
+5. Variables
+var a = 10;
+let b = 20;
+const c = 30;
+Difference:
+var let const
+function scope block scope block scope
+can redeclare cannot cannot
+can update can cannot
+📝 Practice Day 1
+Write all data types examples
+Try changing primitive & object values
+Create variables using var/let/const
+✅ DAY 2: Operators + Conditions + Loops
+1. Arithmetic Operators
+let a = 10, b = 5;
+console.log(a + b); // 15
+console.log(a % b); // 0
+2. Comparison Operators
+10 == "10" // true
+10 === "10" // false
+
+👉 Difference:
+
+== → loose
+=== → strict
+3. Logical Operators
+true && false // false
+true || false // true
+!true // false
+4. Loops
+for loop
+for(let i=0;i<5;i++){ console.log(i); } while let i=0; while(i<5){ console.log(i); i++; } do-while let i=0; do{
+    console.log(i); i++; }while(i<5); forEach [1,2,3].forEach(num=> console.log(num));
+    Difference: for vs forEach
+    for forEach
+    break allowed not allowed
+    works on all only arrays
+    📝 Practice Day 2
+    Print 1–10 using all loops
+    Sum of numbers
+    Even/odd check
+    ✅ DAY 3: Functions + Arrow + Scope
+    1. Normal Function
+    function add(a,b){
+    return a+b;
+    }
+    2. Arrow Function
+    const add = (a,b) => a+b;
+    Difference
+    Normal Arrow
+    has own this no this
+    flexible short
+    3. Scope
+    Global
+    Local
+    Block
+    let a = 10; // global
+
+    function test(){
+    let b = 20; // local
+    }
+    4. this keyword
+    let obj = {
+    name:"Rutuja",
+    show(){
+    console.log(this.name);
+    }
+    }
+    📝 Practice Day 3
+    Write 5 functions
+    Convert normal → arrow
+    Try scope examples
+    ✅ DAY 4: Events + DOM + Event Flow
+    1. What is Event?
+
+    User action (click, hover)
+
+    2. Event Handling
+    button.addEventListener("click", () => {
+    alert("Clicked");
+    });
+    3. Event Bubbling
+
+    Child → Parent
+
+    4. Capturing
+
+    Parent → Child
+
+    5. Delegation
+
+    Parent handles child events
+
+    📝 Practice Day 4
+    Button click event
+    Multiple buttons using delegation
+    ✅ DAY 5: Advanced JS (IMPORTANT)
+    1. Hoisting
+    console.log(a);
+    var a = 10;
+    2. Closures
+    function outer(){
+    let a = 10;
+    return function inner(){
+    console.log(a);
+    }
+    }
+    3. Template Literals
+    let name = "Rutuja";
+    console.log(`Hello ${name}`);
+    4. Spread Operator
+    let arr = [1,2];
+    let newArr = [...arr,3];
+    5. Destructuring
+    let {name} = {name:"Rutuja"};
+    6. Ternary
+    let result = age > 18 ? "Adult" : "Child";
+    7. Shallow vs Deep Copy
+    let obj = {a:1};
+    let copy = {...obj}; // shallow
+    📝 Practice Day 5
+    Write closure example
+    Use spread & destructuring
+    Convert if → ternary
+    ✅ DAY 6: Advanced OOP + Async JS
+    1. Promises
+    let p = new Promise((res, rej)=>{
+    res("Success");
+    });
+    Methods:
+    then()
+    catch()
+    finally()
+    Promise.all()
+    2. Class & Object
+    class Person{
+    constructor(name){
+    this.name = name;
+    }
+    }
+    3. Inheritance
+    class A{}
+    class B extends A{}
+    4. Static
+    class Test{
+    static show(){
+    console.log("Hello");
+    }
+    }
+    5. Object.freeze
+    let obj = {a:1};
+    Object.freeze(obj);
+    6. Generator
+    function* gen(){
+    yield 1;
+    yield 2;
+    }
+    7. Currying
+    function add(a){
+    return function(b){
+    return a+b;
+    }
+    }
+    📝 Practice Day 6
+    Create class & inheritance
+    Write promise example
+    Try currying
